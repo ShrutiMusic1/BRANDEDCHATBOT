@@ -1,7 +1,7 @@
 ## ʙʀᴀɴᴅᴇᴅ ᴋɪɴɢ 🚬🦋
 
 <h2 align="center">   
-    ──「◄⏤͟͞ꭙͯ͢³⋆꯭ꙶ⋆꯭ͣ⋆᭄ͫ͢🍁⃝🇧𝐑𝐀𝐍𝐃𝐄𝐃 ᥫᩣ🇰𝗜𝗡𝗚𐏓꯭ ᷞ ͦ͢ ͮ ͤ𓆪🕊⃝🦋 」──  
+    ──「◄⏤͟͞ꭙͯ͢³⋆꯭ꙶ⋆꯭ͣ⋆᭄ͫ͢ SHRISTI🦋𓆪𐏓꯭ ᷞ ͦ͢ ͮ ͤ𓆪🕊⃝🦋 」──  
    </h2>  
  <p align="center">   
 <img src="https://graph.org/file/51e1bf391ebb7421aca57.jpg"
