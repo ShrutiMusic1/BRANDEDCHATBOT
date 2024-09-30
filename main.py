@@ -16,10 +16,10 @@ API_HASH = os.environ.get("API_HASH", None)
 BOT_TOKEN = os.environ.get("BOT_TOKEN", None) 
 MONGO_URL = os.environ.get("MONGO_URL", None)
 BOT_USERNAME = os.environ.get("BOT_USERNAME","") 
-UPDATE_CHNL = os.environ.get("UPDATE_CHNL","@SHRISTISPAMUPDATE")
+UPDATE_CHNL = os.environ.get("UPDATE_CHNL","SHRISTISPAMUPDATE")
 OWNER_USERNAME = os.environ.get("OWNER_USERNAME","@I_am_pure_single")
-SUPPORT_GRP = os.environ.get("SUPPORT_GRP","@SHRISTISPAMXMUSIC")
-BOT_NAME = os.environ.get("BOT_NAME","CHATBOT")
+SUPPORT_GRP = os.environ.get("SUPPORT_GRP","SHRISTISPAMXMUSIC")
+BOT_NAME = os.environ.get("BOT_NAME","SHRISTI")
 START_IMG = os.environ.get("START_IMG","")
 
 STKR = os.environ.get("STKR")
@@ -52,7 +52,7 @@ g=choice(x)
 async def is_admins(chat_id: int):
     return [
         member.user.id
-        async for member in BRANDEDCHAT.get_chat_members(
+        async for member in SHRISTISPAMXMUSIC.get_chat_members(
             chat_id, filter=enums.ChatMembersFilter.ADMINISTRATORS
         )
     ]
@@ -90,14 +90,14 @@ PNG_BTN = [
      ],
 ]
 
-HELP_READ = "**ᴜsᴀɢᴇ ☟︎︎︎**\n**➻ ᴜsᴇ** `/chatbot on` **ᴛᴏ ᴇɴᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ.**\n**➻ ᴜsᴇ** `/chatbot off` **ᴛᴏ ᴅɪsᴀʙʟᴇ ᴛʜᴇ ᴄʜᴀᴛʙᴏᴛ.**\n**๏ ɴᴏᴛᴇ ➻ ʙᴏᴛʜ ᴛʜᴇ ᴀʙᴏᴠᴇ ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ᴄʜᴀᴛ-ʙᴏᴛ ᴏɴ/ᴏғғ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ!!**\n\n**➻ ᴜsᴇ** `/ping` **ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ ᴘɪɴɢ ᴏғ ᴛʜᴇ ʙᴏᴛ.**\n||©️ @BRANDRD_BOT||"
+HELP_READ = "**ᴜsᴀɢᴇ ☟︎︎︎**\n**➻ ᴜsᴇ** `/chatbot on` **ᴛᴏ ᴇɴᴀʙʟᴇ ᴄʜᴀᴛʙᴏᴛ.**\n**➻ ᴜsᴇ** `/chatbot off` **ᴛᴏ ᴅɪsᴀʙʟᴇ ᴛʜᴇ ᴄʜᴀᴛʙᴏᴛ.**\n**๏ ɴᴏᴛᴇ ➻ ʙᴏᴛʜ ᴛʜᴇ ᴀʙᴏᴠᴇ ᴄᴏᴍᴍᴀɴᴅs ғᴏʀ ᴄʜᴀᴛ-ʙᴏᴛ ᴏɴ/ᴏғғ ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ!!**\n\n**➻ ᴜsᴇ** `/ping` **ᴛᴏ ᴄʜᴇᴄᴋ ᴛʜᴇ ᴘɪɴɢ ᴏғ ᴛʜᴇ ʙᴏᴛ.**\n||©️ @Shristi_spamxmusic_bot||"
 HELP_BACK = [
      
     [
            InlineKeyboardButton(text="ʙᴀᴄᴋ ", callback_data="HELP_BACK"),
     ]
 ]
-@BRANDEDCHAT.on_message(filters.incoming & filters.private, group=-1)
+@Shristi_spamxmusic.on_message(filters.incoming & filters.private, group=-1)
 async def must_join_channel(bot: Client, msg: Message):
     if not UPDATE_CHNL:
         return
@@ -126,12 +126,18 @@ async def must_join_channel(bot: Client, msg: Message):
                 pass
     except ChatAdminRequired:
         print(f"Promote me as an admin in the UPDATE CHANNEL  : {UPDATE_CHNL} !")
-@BRANDEDCHAT.on_message(filters.command(["start",f"start@{BOT_USERNAME}"]))
+@Shristi_spamxmusic.on_message(filters.command(["start",f"start@{BOT_USERNAME}"]))
 async def restart(client, m: Message):
         accha = await m.reply_text(
                         text = f"{g}")
         await asyncio.sleep(1)
-        await accha.edit("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉 @SHRISTISPAMUPDATE , @SHRISTISPAMXMUSIC , 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @I_am_pure_single ❤️")
+        await accha.edit("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉 @SHRISTISPAMXMUSIC , @SHRISTISPAMUPDATE 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @I_am_pure_single ❤️")
+        await asyncio.sleep(0.5)
+        await accha.edit("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉 @SHRISTISPAMXMUSIC , @SHRISTISPAMUPDATE 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @I_am_pure_single ❤️")
+        await asyncio.sleep(0.5)
+        await accha.edit("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉  @SHRISTISPAMXMUSIC , @SHRISTISPAMUPDATE 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @I_am_pure_single ❤️")
+        await asyncio.sleep(0.5)
+        await accha.delete("🦋𝗡𝗢𝗪 𝗖𝗢𝗠𝗘 𝗛𝗘𝗥𝗘 👉  @SHRISTISPAMXMUSIC , @SHRISTISPAMUPDATE 𝗔𝗡𝗗 𝗠𝗔𝗞𝗘 𝗬𝗢𝗨𝗥 𝗚𝗜𝗥𝗟𝗙𝗥𝗜𝗡𝗗 🥀 𝗜𝗙 𝗬𝗢 𝗛𝗔𝗩𝗘 𝗔 𝗚𝗜𝗥𝗟𝗙𝗜𝗘𝗡𝗗  😘 𝗧𝗛𝗘𝗡 𝗬𝗢𝗨 𝗪𝗜𝗟𝗟 𝗚𝗜𝗙𝗧 🙊 𝗧𝗢 𝗠𝗬 𝗢𝗪𝗡𝗘𝗥 @I_am_pure_single ❤️")
         umm = await m.reply_sticker(
                   sticker = STKR,
         )
@@ -144,7 +150,7 @@ async def restart(client, m: Message):
         )
 
 
-@BRANDEDCHAT.on_callback_query()
+@Shristi_spamxmusic.on_callback_query()
 async def cb_handler(Client, query: CallbackQuery):
     if query.data == "HELP":
      await query.message.edit_text(
@@ -161,17 +167,17 @@ async def cb_handler(Client, query: CallbackQuery):
     elif query.data == 'hurr':
         await query.answer()
         await query.message.edit_text(SOURCE)
-@BRANDEDCHAT.on_message(filters.command(["help", f"help@{BOT_USERNAME}"], prefixes=["","+", ".", "/", "-", "?", "$"]))
+@Shristi_spamxmusic.on_message(filters.command(["help", f"help@{BOT_USERNAME}"], prefixes=["","+", ".", "/", "-", "?", "$"]))
 async def restart(client, message):
     hmm = await message.reply_photo(START_IMG,
                              caption= HELP_READ,
                         reply_markup= InlineKeyboardMarkup(HELP_BACK),
        )
-@BRANDEDCHAT.on_message(filters.command(['source', 'repo']))
+@Shristi_spamxmusic.on_message(filters.command(['source', 'repo']))
 async def source(bot, m):
     await m.reply_photo(START_IMG, caption=SOURCE_TEXT, reply_markup=SOURCE_BUTTONS, reply_to_message_id=m.id)
 #  alive
-@BRANDEDCHAT.on_message(filters.command(["ping","alive"], prefixes=["","+", "/", "-", "?", "$", "&","."]))
+@Shristi_spamxmusic.on_message(filters.command(["ping","alive"], prefixes=["","+", "/", "-", "?", "$", "&","."]))
 async def ping(client, message: Message):
         start = datetime.now()
         t = "__ριиgιиg...__"
@@ -184,11 +190,11 @@ async def ping(client, message: Message):
         ms = (end-start).microseconds / 1000
         await message.reply_photo(
                              photo=START_IMG,
-                             caption=f"ʜᴇʏ ʙᴀʙʏ!!\n**[{BOT_NAME}](t.me/{BOT_USERNAME})** ɪꜱ ᴀʟɪᴠᴇ 🥀 ᴀɴᴅ ᴡᴏʀᴋɪɴɢ ꜰɪɴᴇ ᴡɪᴛʜ ᴘᴏɴɢ ᴏꜰ \n➥ `{ms}` ms\n\n**ᴍᴀᴅᴇ ᴡɪᴛʜ ❣️ ʙʏ || [BRANDED KING](https://t.me/BRANDEDKING8)||**",
+                             caption=f"ʜᴇʏ ʙᴀʙʏ!!\n**[{BOT_NAME}](t.me/{BOT_USERNAME})** ɪꜱ ᴀʟɪᴠᴇ 🥀 ᴀɴᴅ ᴡᴏʀᴋɪɴɢ ꜰɪɴᴇ ᴡɪᴛʜ ᴘᴏɴɢ ᴏꜰ \n➥ `{ms}` ms\n\n**ᴍᴀᴅᴇ ᴡɪᴛʜ ❣️ ʙʏ || [SANU](https://t.me/I_am_pure_single)||**",
                              reply_markup=InlineKeyboardMarkup(PNG_BTN),
        )
 
-@BRANDEDCHAT.on_message(
+@Shristi_spamxmusic.on_message(
     filters.command(["chatbot off", f"chatbot@{BOT_USERNAME} off"], prefixes=["/", ".", "?", "-"])
     & ~filters.private)
 async def chatbotofd(client, message):
@@ -211,7 +217,7 @@ async def chatbotofd(client, message):
         await message.reply_text(f"ChatBot Already Disabled")
     
 
-@BRANDEDCHAT.on_message(
+@Shristi_spamxmusic.on_message(
     filters.command(["chatbot on", f"chatbot@{BOT_USERNAME} on"] ,prefixes=["/", ".", "?", "-"])
     & ~filters.private)
 async def chatboton(client, message):
@@ -234,14 +240,14 @@ async def chatboton(client, message):
         await message.reply_text(f"ChatBot Enabled!")
     
 
-@BRANDEDCHAT.on_message(
+@Shristi_spamxmusic.on_message(
     filters.command(["chatbot", f"chatbot@{BOT_USERNAME}"], prefixes=["/", ".", "?", "-"])
     & ~filters.private)
 async def chatbot(client, message):
     await message.reply_text(f"**ᴜsᴀɢᴇ:**\n/**chatbot [on/off]**\n**ᴄʜᴀᴛ-ʙᴏᴛ ᴄᴏᴍᴍᴀɴᴅ(s) ᴡᴏʀᴋ ɪɴ ɢʀᴏᴜᴘ ᴏɴʟʏ!**")
 
 
-@BRANDEDCHAT.on_message(
+@Shristi_spamxmusic.on_message(
  (
         filters.text
         | filters.sticker
@@ -259,7 +265,7 @@ async def vickai(client: Client, message: Message):
        vick = vickdb["VickDb"]["Vick"] 
        is_vick = vick.find_one({"chat_id": message.chat.id})
        if not is_vick:
-           await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
+           await SHRISTISPAMXMUSIC.send_chat_action(message.chat.id, ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.text})  
            k = chatai.find_one({"word": message.text})      
@@ -278,11 +284,11 @@ async def vickai(client: Client, message: Message):
        vickdb = MongoClient(MONGO_URL)
        vick = vickdb["VickDb"]["Vick"] 
        is_vick = vick.find_one({"chat_id": message.chat.id})    
-       getme = await BRANDEDCHAT.get_me()
+       getme = await SHRISTISPAMXMUSIC.get_me()
        bot_id = getme.id                             
        if message.reply_to_message.from_user.id == bot_id: 
            if not is_vick:                   
-               await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
+               await SHRISTISPAMXMUSIC.send_chat_action(message.chat.id, ChatAction.TYPING)
                K = []  
                is_chat = chatai.find({"word": message.text})
                k = chatai.find_one({"word": message.text})      
@@ -307,7 +313,7 @@ async def vickai(client: Client, message: Message):
                    chatai.insert_one({"word": message.reply_to_message.text, "text": message.text, "check": "none"})    
                
 
-@BRANDEDCHAT.on_message(
+@Shristi_spamxmusic.on_message(
  (
         filters.sticker
         | filters.text
@@ -325,7 +331,7 @@ async def vickstickerai(client: Client, message: Message):
        vick = vickdb["VickDb"]["Vick"] 
        is_vick = vick.find_one({"chat_id": message.chat.id})
        if not is_vick:
-           await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
+           await SHRISTISPAMXMUSIC.send_chat_action(message.chat.id, ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.sticker.file_unique_id})      
            k = chatai.find_one({"word": message.text})      
@@ -344,11 +350,11 @@ async def vickstickerai(client: Client, message: Message):
        vickdb = MongoClient(MONGO_URL)
        vick = vickdb["VickDb"]["Vick"] 
        is_vick = vick.find_one({"chat_id": message.chat.id})
-       getme = await BRANDEDCHAT.get_me()
+       getme = await SHRISTISPAMXMUSIC.get_me()
        bot_id = getme.id
        if message.reply_to_message.from_user.id == bot_id: 
            if not is_vick:                    
-               await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
+               await SHRISTISPAMXMUSIC.send_chat_action(message.chat.id, ChatAction.TYPING)
                K = []  
                is_chat = chatai.find({"word": message.text})
                k = chatai.find_one({"word": message.text})      
@@ -374,7 +380,7 @@ async def vickstickerai(client: Client, message: Message):
                
 
 
-@BRANDEDCHAT.on_message(
+@Shristi_spamxmusic.on_message(
     (
         filters.text
         | filters.sticker
@@ -387,7 +393,7 @@ async def vickprivate(client: Client, message: Message):
    chatdb = MongoClient(MONGO_URL)
    chatai = chatdb["Word"]["WordDb"]
    if not message.reply_to_message: 
-       await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
+       await SHRISTISPAMXMUSIC.send_chat_action(message.chat.id, ChatAction.TYPING)
        K = []  
        is_chat = chatai.find({"word": message.text})                 
        for x in is_chat:
@@ -400,10 +406,10 @@ async def vickprivate(client: Client, message: Message):
        if not Yo == "sticker":
            await message.reply_text(f"{hey}")
    if message.reply_to_message:            
-       getme = await BRANDEDCHAT.get_me()
+       getme = await SHRISTISPAMXMUSIC.get_me()
        bot_id = getme.id       
        if message.reply_to_message.from_user.id == bot_id:                    
-           await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
+           await SHRISTISPAMXMUSIC.send_chat_action(message.chat.id, ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.text})                 
            for x in is_chat:
@@ -417,7 +423,7 @@ async def vickprivate(client: Client, message: Message):
                await message.reply_text(f"{hey}")
        
 
-@BRANDEDCHAT.on_message(
+@Shristi_spamxmusic.on_message(
  (
         filters.sticker
         | filters.text
@@ -430,7 +436,7 @@ async def vickprivatesticker(client: Client, message: Message):
    chatdb = MongoClient(MONGO_URL)
    chatai = chatdb["Word"]["WordDb"] 
    if not message.reply_to_message:
-       await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
+       await SHRISTISPAMXMUSIC.send_chat_action(message.chat.id, ChatAction.TYPING)
        K = []  
        is_chat = chatai.find({"word": message.sticker.file_unique_id})                 
        for x in is_chat:
@@ -443,10 +449,10 @@ async def vickprivatesticker(client: Client, message: Message):
        if not Yo == "text":
            await message.reply_sticker(f"{hey}")
    if message.reply_to_message:            
-       getme = await BRANDEDCHAT.get_me()
+       getme = await SHRISTISPAMXMUSIC.get_me()
        bot_id = getme.id       
        if message.reply_to_message.from_user.id == bot_id:                    
-           await BRANDEDCHAT.send_chat_action(message.chat.id, ChatAction.TYPING)
+           await SHRISTISPAMXMUSIC.send_chat_action(message.chat.id, ChatAction.TYPING)
            K = []  
            is_chat = chatai.find({"word": message.sticker.file_unique_id})                 
            for x in is_chat:
@@ -460,4 +466,5 @@ async def vickprivatesticker(client: Client, message: Message):
                await message.reply_sticker(f"{hey}")
 
 print(f"{BOT_NAME} ɪs ᴀʟɪᴠᴇ!")      
-BRANDEDCHAT.run()
+SHRISTISPAMXMUSIC.run()
+                               
